@@ -1,0 +1,785 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Find a Dentist Near You | Healusa — Nationwide Dental Clinic Network, USA</title>
+<meta name="description" content="Find a top-rated dentist near you anywhere in the USA. Healusa connects you with trusted dental clinics nationwide — emergency dentist, implants, braces, whitening & more. Call now for same-day appointments.">
+<meta name="keywords" content="dentist near me, find a dentist USA, emergency dentist near me, dental implants near me, best dentist nationwide, family dentist near me, teeth whitening near me, orthodontist near me, pediatric dentist near me, dental clinic finder USA">
+<meta name="theme-color" content="#0a7bc4">
+<meta name="robots" content="index, follow">
+<meta property="og:title" content="Find a Dentist Near You — Healusa Nationwide Dental Network">
+<meta property="og:description" content="Find top-rated dentists anywhere in the USA. Emergency care, implants, braces, whitening & more. Serving all 50 states — call now!">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://healusa.life/">
+<link rel="canonical" href="https://healusa.life/">
+
+<!-- Schema.org Local Business SEO -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Dentist",
+  "name": "Healusa — Nationwide Dental Clinic Network",
+  "description": "Free service connecting US residents nationwide with top-rated dentists in their area.",
+  "url": "https://healusa.life/",
+  "telephone": "+18448330097",
+  "areaServed": {
+    "@type": "Country",
+    "name": "United States"
+  },
+  "address": {
+    "@type": "PostalAddress",
+    "addressCountry": "US"
+  },
+  "openingHours": ["Mo-Fr 07:00-19:00", "Sa 10:00-17:00"],
+  "priceRange": "Free Service",
+  "aggregateRating": {
+    "@type": "AggregateRating",
+    "ratingValue": "4.9",
+    "reviewCount": "1200"
+  }
+}
+</script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;900&family=DM+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+:root{
+  --blue:#0a7bc4;
+  --blue-dark:#065a94;
+  --blue-light:#2196f3;
+  --gold:#c9a84c;
+  --cream:#f0f8ff;
+  --dark:#0d1f2f;
+  --gray:#4a6280;
+  --light-gray:#d0e8f5;
+}
+*{margin:0;padding:0;box-sizing:border-box}
+body{font-family:'DM Sans',sans-serif;color:var(--dark);line-height:1.6;background:#fff}
+
+/* TICKER */
+.ticker{background:var(--blue-dark);color:#fff;padding:11px 0;overflow:hidden;position:sticky;top:0;z-index:100}
+.ticker-wrap{display:flex;overflow:hidden}
+.ticker-move{display:flex;gap:48px;animation:scroll 22s linear infinite;white-space:nowrap}
+.ticker-move span{font-size:13px;font-weight:600;letter-spacing:.3px}
+.ticker-move span em{color:var(--gold);font-style:normal}
+@keyframes scroll{0%{transform:translateX(0)}100%{transform:translateX(-50%)}}
+
+/* NAV */
+.nav{background:#fff;padding:14px 0;border-bottom:1px solid var(--light-gray);position:sticky;top:44px;z-index:99;box-shadow:0 2px 12px rgba(0,0,0,.06)}
+.wrap{max-width:1200px;margin:0 auto;padding:0 24px}
+.nav-wrap{display:flex;justify-content:space-between;align-items:center}
+.logo{display:flex;align-items:center;gap:10px}
+.logo-icon{width:40px;height:40px;background:var(--blue);border-radius:10px;display:flex;align-items:center;justify-content:center;font-size:20px}
+.logo-text{font-family:'Playfair Display',serif;font-size:26px;font-weight:900;color:var(--blue-dark);letter-spacing:-0.5px}
+.logo-text span{color:var(--gold)}
+.menu{display:flex;gap:20px;align-items:center}
+.menu a{color:var(--dark);text-decoration:none;font-weight:600;font-size:15px;transition:.2s}
+.menu a:hover{color:var(--blue)}
+.btn{display:inline-flex;align-items:center;gap:8px;padding:12px 22px;background:var(--blue);color:#fff;border-radius:8px;text-decoration:none;font-weight:700;transition:.2s;border:none;cursor:pointer;font-size:15px}
+.btn:hover{background:var(--blue-dark);transform:translateY(-1px)}
+.btn-gold{background:var(--gold);color:var(--dark)}
+.btn-gold:hover{background:#b8922e}
+.btn-outline{background:transparent;border:2px solid rgba(255,255,255,.8);color:#fff}
+.btn-outline:hover{background:rgba(255,255,255,.15)}
+.nav-phone-box{display:inline-flex;align-items:center;gap:7px;background:#f5c518;color:#0d1f17;font-weight:800;font-size:14px;padding:8px 16px;border-radius:7px;text-decoration:none;letter-spacing:.2px;box-shadow:0 2px 8px rgba(245,197,24,.4);transition:.2s}
+.nav-phone-box:hover{background:#e0b000}
+.nav-phone-desktop{display:inline-flex}
+.nav-phone-mobile{display:none}
+.ham{display:none;flex-direction:column;gap:5px;cursor:pointer;padding:6px}
+.ham span{width:22px;height:2px;background:var(--dark);border-radius:2px;transition:.3s}
+
+/* HERO */
+.hero{position:relative;min-height:88vh;display:flex;align-items:center;}
+.hero-bg{position:absolute;inset:0}
+.hero-bg img{width:100%;height:100%;object-fit:cover;object-position:center 30%}
+.hero-overlay{position:absolute;inset:0;background:rgba(0,0,0,0.35)}
+.hero-content{position:relative;z-index:2;color:#fff;padding:80px 0}
+.hero-badge{display:inline-flex!important;align-items:center;gap:10px;background:rgba(201,168,76,.25);border:2px solid rgba(201,168,76,.8);padding:12px 22px;border-radius:10px;font-size:18px;font-weight:900;color:#f5c518;margin-bottom:24px;letter-spacing:1px;text-transform:uppercase;text-shadow:0 1px 4px rgba(0,0,0,.4)}
+.hero h1{font-family:'Playfair Display',serif;font-size:58px;font-weight:900;line-height:1.08;margin-bottom:22px;text-shadow:0 2px 20px rgba(0,0,0,.4)}
+.hero h1 em{font-style:normal;color:var(--gold)}
+.hero p{font-size:19px;opacity:.92;max-width:600px;margin-bottom:32px;line-height:1.65}
+
+/* PHONE BOX */
+.hero-phone-box{display:inline-flex;align-items:center;gap:12px;background:#f5c518;border-radius:10px;padding:14px 28px;margin-bottom:24px;box-shadow:0 6px 24px rgba(245,197,24,.4)}
+.hero-phone-box a{font-family:'Playfair Display',serif;font-size:36px;font-weight:900;color:#0d1f17;text-decoration:none;letter-spacing:-0.5px}
+.hero-phone-box .ph-icon{font-size:30px}
+.hero-note{font-size:13px;opacity:.75;margin-top:16px}
+.flex{display:flex;gap:14px;flex-wrap:wrap;align-items:center}
+
+/* MOBILE HERO BUTTON FIX */
+@media(max-width:600px){
+  .flex-hero{flex-direction:column;width:100%}
+  .flex-hero .btn{width:100%;justify-content:center;white-space:nowrap;font-size:15px!important;padding:15px 16px!important}
+}
+
+/* TRUST BAR */
+.trust{background:var(--cream);border-top:3px solid var(--gold);border-bottom:1px solid var(--light-gray);padding:24px 0}
+.trust-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(180px,1fr));gap:16px;text-align:center}
+.trust-item{padding:16px}
+.trust-num{font-family:'Playfair Display',serif;font-size:34px;font-weight:900;color:var(--blue)}
+.trust-label{font-size:13px;color:var(--gray);margin-top:4px;font-weight:500}
+
+/* SECTIONS */
+.sect{padding:70px 0}
+.bg-cream{background:var(--cream)}
+.sect-title{font-family:'Playfair Display',serif;font-size:38px;font-weight:900;text-align:center;margin-bottom:12px}
+.sect-sub{text-align:center;color:var(--gray);font-size:17px;margin-bottom:44px;max-width:560px;margin-left:auto;margin-right:auto}
+.grid{display:grid;gap:22px;grid-template-columns:repeat(auto-fit,minmax(280px,1fr))}
+.card{background:#fff;padding:30px;border-radius:14px;box-shadow:0 4px 16px rgba(0,0,0,.07);transition:.3s;border:1px solid var(--light-gray)}
+.card:hover{box-shadow:0 10px 30px rgba(0,0,0,.12);transform:translateY(-4px)}
+.card-icon{font-size:36px;margin-bottom:16px}
+.card h3{font-family:'Playfair Display',serif;font-size:20px;margin-bottom:10px;color:var(--blue-dark)}
+.card p{color:var(--gray);font-size:15px;line-height:1.7}
+
+/* SERVICES */
+.services-list{display:grid;gap:14px}
+.service-row{display:flex;align-items:center;gap:16px;padding:20px 24px;background:#fff;border-radius:12px;border:1px solid var(--light-gray);transition:.2s}
+.service-row:hover{border-color:var(--blue);background:var(--cream)}
+.service-row .icon{font-size:28px;flex-shrink:0}
+.service-row strong{display:block;font-size:16px;color:var(--dark);margin-bottom:4px}
+.service-row span{font-size:14px;color:var(--gray)}
+
+/* HOW IT WORKS */
+.steps{display:grid;gap:0;grid-template-columns:repeat(3,1fr);position:relative}
+.steps::before{content:'';position:absolute;top:36px;left:16.6%;right:16.6%;height:2px;background:linear-gradient(90deg,var(--gold),var(--blue-light));z-index:0}
+.step{text-align:center;padding:0 20px;position:relative;z-index:1}
+.step-num{width:72px;height:72px;background:var(--blue);border:4px solid #fff;box-shadow:0 4px 16px rgba(10,123,196,.3);border-radius:50%;display:flex;align-items:center;justify-content:center;font-family:'Playfair Display',serif;font-size:26px;font-weight:900;color:#fff;margin:0 auto 20px}
+.step h3{font-size:17px;font-weight:700;margin-bottom:8px}
+.step p{font-size:14px;color:var(--gray)}
+
+/* CITIES WE SERVE */
+.neighborhoods{display:flex;flex-wrap:wrap;gap:10px;margin-top:28px;justify-content:center}
+.neighborhood-tag{background:var(--cream);border:1px solid var(--light-gray);border-radius:20px;padding:7px 18px;font-size:14px;font-weight:600;color:var(--blue-dark);transition:.2s}
+.neighborhood-tag:hover{background:var(--blue);color:#fff;border-color:var(--blue)}
+
+/* SEO CONTENT BLOCK */
+.seo-sect{padding:70px 0;background:#fff}
+.seo-sect h2{font-family:'Playfair Display',serif;font-size:34px;font-weight:900;color:var(--blue-dark);margin-bottom:18px}
+.seo-sect h3{font-family:'Playfair Display',serif;font-size:24px;font-weight:700;color:var(--blue-dark);margin:36px 0 12px}
+.seo-sect p{font-size:16px;color:var(--gray);line-height:1.85;margin-bottom:16px}
+.seo-sect ul{margin:12px 0 20px 22px}
+.seo-sect ul li{font-size:15px;color:var(--gray);line-height:1.8;margin-bottom:8px}
+.seo-sect strong{color:var(--dark)}
+
+/* SERVICE IMAGES */
+.service-img-banner{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin:32px 0}
+.service-img-banner img{width:100%;height:200px;object-fit:cover;border-radius:14px;box-shadow:0 6px 20px rgba(0,0,0,.12);transition:.3s}
+.service-img-banner img:hover{transform:scale(1.02);box-shadow:0 10px 30px rgba(0,0,0,.18)}
+@media(max-width:768px){.service-img-banner{grid-template-columns:1fr;gap:12px}.service-img-banner img{height:180px}}
+
+/* DISCLAIMER */
+.disclaimer{background:#fff8e1;border:1px solid #f0d070;border-radius:12px;padding:24px 28px;margin:44px 0 0;font-size:13px;color:#6b5800;line-height:1.8}
+.disclaimer strong{color:#4a3d00}
+
+/* FAB */
+.fab{position:fixed;bottom:26px;right:26px;width:118px;height:118px;z-index:9999;text-decoration:none;border-radius:50%;}
+.fab-inner{width:118px;height:118px;background:linear-gradient(135deg,var(--blue),var(--blue-light));color:#fff;border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:48px;box-shadow:0 10px 40px rgba(10,123,196,.55);border:4px solid rgba(255,255,255,.35);animation:pulse 2.2s infinite;}
+@keyframes pulse{
+  0%,100%{transform:scale(1);box-shadow:0 10px 40px rgba(10,123,196,.55)}
+  50%{transform:scale(1.12);box-shadow:0 16px 55px rgba(10,123,196,.75)}
+}
+
+/* CTA */
+.cta-sect{background:linear-gradient(135deg,var(--blue-dark),var(--blue));color:#fff;padding:72px 0;text-align:center}
+.cta-sect h2{font-family:'Playfair Display',serif;font-size:42px;margin-bottom:16px}
+.cta-sect p{font-size:18px;opacity:.9;margin-bottom:32px}
+.cta-phone-box{display:inline-flex;align-items:center;gap:8px;background:#f5c518;border-radius:8px;padding:10px 20px;margin-bottom:24px;box-shadow:0 3px 10px rgba(245,197,24,.35);font-size:18px;font-weight:800;color:#0d1f17;text-decoration:none;}
+
+/* FOOTER */
+.footer{background:var(--dark);color:#8fa8c8;padding:48px 0 24px}
+.footer-grid{display:grid;grid-template-columns:2fr repeat(3,1fr);gap:40px;margin-bottom:40px}
+.footer h4{color:#fff;font-size:15px;font-weight:700;margin-bottom:14px}
+.footer ul{list-style:none}
+.footer ul li{margin-bottom:8px}
+.footer a{color:#8fa8c8;text-decoration:none;font-size:14px;transition:.2s}
+.footer a:hover{color:#fff}
+.footer-desc{font-size:14px;line-height:1.8;margin-top:8px}
+.footer-bottom{border-top:1px solid #1e3040;padding-top:20px;text-align:center;font-size:12px;opacity:.5}
+.footer .logo-text{color:#e0e8f0}
+
+/* RESPONSIVE */
+@media(max-width:900px){
+  .footer-grid{grid-template-columns:1fr 1fr}
+  .steps{grid-template-columns:1fr;gap:32px}
+  .steps::before{display:none}
+}
+@media(max-width:768px){
+  .nav-phone-desktop{display:none}
+  .nav-phone-mobile{display:inline-flex}
+  .menu{display:none;position:absolute;top:64px;left:0;right:0;background:#fff;flex-direction:column;padding:20px;box-shadow:0 8px 20px rgba(0,0,0,.1);z-index:200}
+  .menu.show{display:flex}
+  .ham{display:flex}
+  .hero h1{font-size:30px}
+  .hero p{font-size:16px}
+  .hero-phone-box a{font-size:28px}
+  .hero-phone-box{padding:14px 22px;gap:10px;width:100%;max-width:340px;margin:0 0 16px;display:flex}
+  .hero-phone-box .ph-icon{font-size:26px}
+  .hero-content{padding-left:20px!important;padding-right:20px!important}
+  .sect-title{font-size:28px}
+  .footer-grid{grid-template-columns:1fr}
+  .hero-badge{margin-top:-15px;font-size:15px;padding:10px 16px}
+  .hero-content{padding:50px 0}
+  /* Fix buttons on mobile — full width, no wrapping */
+  .flex-hero{flex-direction:column;width:100%;max-width:340px}
+  .flex-hero .btn{
+    width:100%;
+    justify-content:center;
+    white-space:nowrap;
+    font-size:15px!important;
+    padding:15px 12px!important;
+  }
+}
+@media(max-width:400px){
+  .hero h1{font-size:26px}
+  .hero-phone-box a{font-size:24px}
+}
+</style>
+</head>
+<body>
+
+<!-- TICKER -->
+<div class="ticker">
+  <div class="ticker-wrap">
+    <div class="ticker-move">
+      <span>🇺🇸 Serving All 50 States — Find a Dentist Near You Now</span>
+      <span>📞 <em>Call Now — Free Service</em></span>
+      <span>😣 Tooth Pain Relief Nationwide — Same-Day Appointments</span>
+      <span>🇺🇸 Dental Implants Near You — Call Now</span>
+      <span>😁 Braces &amp; Invisalign — Find a Specialist Today</span>
+      <span>🌎 Teeth Whitening — Professional Results Near You</span>
+      <span>🇺🇸 Serving All 50 States — Find a Dentist Near You Now</span>
+      <span>📞 <em>Call Now — Free Service</em></span>
+      <span>😣 Tooth Pain Relief Nationwide — Same-Day Appointments</span>
+      <span>🇺🇸 Dental Implants Near You — Call Now</span>
+      <span>😁 Braces &amp; Invisalign — Find a Specialist Today</span>
+      <span>🌎 Teeth Whitening — Professional Results Near You</span>
+    </div>
+  </div>
+</div>
+
+<!-- NAV -->
+<nav class="nav">
+  <div class="wrap nav-wrap">
+    <div class="logo">
+      <div class="logo-icon">🦷</div>
+      <div class="logo-text">Heal<span>usa</span></div>
+      <span style="display:inline-flex;align-items:center;gap:2px;margin-left:8px">
+        <img src="https://flagcdn.com/w40/us.png" width="28" height="19" style="border-radius:2px;box-shadow:0 1px 3px rgba(0,0,0,0.2);display:block" alt="USA" title="USA">
+      </span>
+    </div>
+    <button class="ham" id="ham" onclick="toggleMenu()">
+      <span></span><span></span><span></span>
+    </button>
+    <div class="menu" id="menu">
+      <a href="#services">Services</a>
+      <a href="#how">How It Works</a>
+      <a href="#why">Why Us</a>
+      <a href="#faq">FAQ</a>
+      <a href="#contact">Contact</a>
+      <a href="tel:+18448330097" class="nav-phone-box nav-phone-mobile" style="margin-top:8px">📞 Call Now</a>
+    </div>
+    <a href="tel:+18448330097" class="nav-phone-box nav-phone-desktop">📞 Call Now</a>
+  </div>
+</nav>
+
+<!-- HERO -->
+<section class="hero">
+  <div class="hero-bg">
+    <img src="https://images.unsplash.com/photo-1606811841689-23dfddce3e95?w=1200&q=80" alt="Professional dental clinic — nationwide network" loading="eager">
+  </div>
+  <div class="hero-overlay"></div>
+  <div class="wrap hero-content">
+    <div class="hero-badge">
+      <span style="display:inline-flex;align-items:center;gap:2px;vertical-align:middle;margin-right:6px">
+        <img src="https://flagcdn.com/w40/us.png" width="22" height="15" style="border-radius:2px;display:block" alt="USA">
+      </span>
+      Serving All 50 States
+    </div>
+    <h1>Find the Best <em>Dentist Near You</em> — Call &amp; Get Seen Today!</h1>
+    <p>Get instantly connected with a highest-rated dental clinic near you, anywhere in the USA. Tooth pain, implants, braces, whitening &amp; more. One call is all it takes.</p>
+    <div class="hero-phone-box">
+      <span class="ph-icon">📞</span>
+      <a href="tel:+18448330097">(844) 833-0097</a>
+    </div>
+    <div class="flex flex-hero">
+      <a href="tel:+18448330097" class="btn btn-gold" style="font-size:17px;padding:16px 32px;white-space:nowrap">📞 Find a Dentist Near You</a>
+      <a href="#services" class="btn btn-outline" style="white-space:nowrap">See All Services</a>
+    </div>
+    <p class="hero-note">✓ Free Service &nbsp;|&nbsp; ✓ No Obligation &nbsp;|&nbsp; ✓ Serving All 50 States</p>
+  </div>
+</section>
+
+<!-- TRUST BAR -->
+<div class="trust">
+  <div class="wrap">
+    <div class="trust-grid">
+      <div class="trust-item">
+        <div class="trust-num">50K+</div>
+        <div class="trust-label">Patients Helped Nationwide</div>
+      </div>
+      <div class="trust-item">
+        <div class="trust-num">🇺🇸 5,000+</div>
+        <div class="trust-label">Clinics Nationwide</div>
+      </div>
+      <div class="trust-item">
+        <div class="trust-num">98%</div>
+        <div class="trust-label">Patient Satisfaction</div>
+      </div>
+      <div class="trust-item">
+        <div class="trust-num" style="display:flex;justify-content:center;gap:4px;align-items:center">
+          <img src="https://flagcdn.com/w40/us.png" width="38" height="26" style="border-radius:3px;box-shadow:0 2px 6px rgba(0,0,0,0.15)" alt="USA">
+        </div>
+        <div class="trust-label">Proudly Serving All 50 States</div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- SERVICES -->
+<section class="sect bg-cream" id="services">
+  <div class="wrap">
+    <h2 class="sect-title">Complete Dental Services Near You</h2>
+    <p class="sect-sub">From urgent tooth pain to full smile transformations — we connect you with trusted dental specialists near you for every service you need</p>
+    <div class="services-list">
+
+      <div class="service-row">
+        <div class="icon">😣</div>
+        <div>
+          <strong>Tooth Pain Relief — Same-Day Care</strong>
+          <span>Suffering from sudden tooth pain? We connect you with the nearest available dental clinic for immediate pain relief — same-day appointments available nationwide</span>
+        </div>
+      </div>
+
+      <div class="service-row">
+        <div class="icon">🦷</div>
+        <div>
+          <strong>Dental Implants Near You</strong>
+          <span>Looking for permanent tooth replacement? Dental implant specialists are standing by nationwide. Single implants, full arch restorations, and All-on-4 procedures — find the best implant dentist near you now</span>
+        </div>
+      </div>
+
+      <div class="service-row">
+        <div class="icon">😁</div>
+        <div>
+          <strong>Braces &amp; Invisalign</strong>
+          <span>Straighten your teeth with traditional braces or clear Invisalign aligners. Find top-rated orthodontists near you — for kids, teens, and adults nationwide</span>
+        </div>
+      </div>
+
+      <div class="service-row">
+        <div class="icon">✨</div>
+        <div>
+          <strong>Teeth Whitening Near You</strong>
+          <span>Professional teeth whitening services by certified dentists nationwide. In-office laser whitening and take-home kits — get a brighter smile fast, anywhere in the USA</span>
+        </div>
+      </div>
+
+      <div class="service-row">
+        <div class="icon">👑</div>
+        <div>
+          <strong>Dental Crowns &amp; Veneers</strong>
+          <span>Restore or transform your smile with porcelain crowns and veneers. Find a cosmetic dentist near you offering same-week consultations — serving cities nationwide</span>
+        </div>
+      </div>
+
+      <div class="service-row">
+        <div class="icon">🚨</div>
+        <div>
+          <strong>Emergency Dentist Near You — Open Now</strong>
+          <span>Broken tooth, knocked-out tooth, severe abscess, or lost crown? We connect you to the nearest emergency dental clinic available today — no waiting</span>
+        </div>
+      </div>
+
+      <div class="service-row">
+        <div class="icon">👨‍👩‍👧</div>
+        <div>
+          <strong>Family Dentist Near You — All Ages Welcome</strong>
+          <span>Find a trusted family dental clinic near you that treats kids, adults, and seniors. Convenient locations nationwide — one practice for the whole family</span>
+        </div>
+      </div>
+
+      <!-- MID SERVICES IMAGE BANNER -->
+      <div class="service-img-banner">
+        <img src="https://images.unsplash.com/photo-1606811841689-23dfddce3e95?w=600&q=80" alt="Professional dental clinic — nationwide network" loading="lazy">
+        <img src="https://images.unsplash.com/photo-1609840114035-3c981b782dfe?w=600&q=80" alt="Dentist examining patient teeth" loading="lazy">
+        <img src="https://images.unsplash.com/photo-1629909613654-28e377c37b09?w=600&q=80" alt="Modern dental equipment Florida" loading="lazy">
+      </div>
+
+      <div class="service-row">
+        <div class="icon">👴</div>
+        <div>
+          <strong>Senior Dental Care — Dentures &amp; Implants</strong>
+          <span>Specialized senior dental care including full dentures, partial dentures, implants, and Medicare-friendly dental plans. Compassionate care for older adults nationwide</span>
+        </div>
+      </div>
+
+      <div class="service-row">
+        <div class="icon">🔬</div>
+        <div>
+          <strong>General Dentistry — Cleanings, Fillings &amp; X-Rays</strong>
+          <span>Routine checkups, deep cleanings, cavity fillings, and digital X-rays at trusted local dental clinics nationwide. Preventive care to keep your smile healthy year-round</span>
+        </div>
+      </div>
+
+      <div class="service-row">
+        <div class="icon">😴</div>
+        <div>
+          <strong>Sedation Dentistry — Anxiety-Free Care</strong>
+          <span>Dental anxiety? Find a dentist near you who offers nitrous oxide, oral sedation, and IV sedation for comfortable, stress-free dental treatment anywhere in the USA</span>
+        </div>
+      </div>
+
+      <div class="service-row">
+        <div class="icon">🧒</div>
+        <div>
+          <strong>Pediatric Dentist Near You — Kids &amp; Toddlers</strong>
+          <span>Child-friendly pediatric dentists near you making dental visits fun, gentle, and stress-free for young patients. Serving families nationwide</span>
+        </div>
+      </div>
+
+      <div class="service-row">
+        <div class="icon">🦴</div>
+        <div>
+          <strong>Oral Surgery &amp; Tooth Extractions</strong>
+          <span>Wisdom tooth removal, tooth extractions, and oral surgery by certified oral surgeons near you. Fast appointments, gentle care, and full recovery guidance nationwide</span>
+        </div>
+      </div>
+
+      <div class="service-row">
+        <div class="icon">🩺</div>
+        <div>
+          <strong>Periodontal (Gum Disease) Treatment</strong>
+          <span>Gum disease treatment by periodontists near you — scaling and root planing, gum surgery, and maintenance therapy. Protect your gum health with expert care nationwide</span>
+        </div>
+      </div>
+
+      <div class="service-row">
+        <div class="icon">🔗</div>
+        <div>
+          <strong>Dental Bridges &amp; Dentures</strong>
+          <span>Replace missing teeth with affordable dental bridges and custom dentures near you. Restore your smile and confidence with same-week consultations available nationwide</span>
+        </div>
+      </div>
+
+      <div class="service-row">
+        <div class="icon">🌙</div>
+        <div>
+          <strong>TMJ &amp; Night Guard Treatment</strong>
+          <span>Jaw pain, teeth grinding, or TMJ disorder? Find a dentist near you who specializes in custom night guards and TMJ therapy — protecting your teeth while you sleep</span>
+        </div>
+      </div>
+
+      <!-- BOTTOM SERVICES IMAGE BANNER -->
+      <div class="service-img-banner">
+        <img src="https://images.unsplash.com/photo-1581594693702-fbdc51b2763b?w=600&q=80" alt="Dental implants specialist — nationwide network" loading="lazy">
+        <img src="https://images.unsplash.com/photo-1607613009820-a29f7bb81c04?w=600&q=80" alt="Teeth whitening professional results" loading="lazy">
+        <img src="https://images.unsplash.com/photo-1571772996211-2f02c9727629?w=600&q=80" alt="Happy patient after dental treatment Florida" loading="lazy">
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- CITIES WE SERVE -->
+<section class="sect" id="neighborhoods">
+  <div class="wrap">
+    <h2 class="sect-title">We Serve All 50 States</h2>
+    <p class="sect-sub">No matter where you are in the USA — we have a dental clinic close to you</p>
+    <div class="neighborhoods">
+      <span class="neighborhood-tag">📍 New York, NY</span>
+      <span class="neighborhood-tag">📍 Los Angeles, CA</span>
+      <span class="neighborhood-tag">📍 Chicago, IL</span>
+      <span class="neighborhood-tag">📍 Houston, TX</span>
+      <span class="neighborhood-tag">📍 Phoenix, AZ</span>
+      <span class="neighborhood-tag">📍 Philadelphia, PA</span>
+      <span class="neighborhood-tag">📍 San Antonio, TX</span>
+      <span class="neighborhood-tag">📍 San Diego, CA</span>
+      <span class="neighborhood-tag">📍 Dallas, TX</span>
+      <span class="neighborhood-tag">📍 Austin, TX</span>
+      <span class="neighborhood-tag">📍 Jacksonville, FL</span>
+      <span class="neighborhood-tag">📍 Orlando, FL</span>
+      <span class="neighborhood-tag">📍 Miami, FL</span>
+      <span class="neighborhood-tag">📍 Atlanta, GA</span>
+      <span class="neighborhood-tag">📍 Charlotte, NC</span>
+      <span class="neighborhood-tag">📍 Columbus, OH</span>
+      <span class="neighborhood-tag">📍 Denver, CO</span>
+      <span class="neighborhood-tag">📍 Seattle, WA</span>
+      <span class="neighborhood-tag">📍 Boston, MA</span>
+      <span class="neighborhood-tag">📍 Nashville, TN</span>
+      <span class="neighborhood-tag">📍 Detroit, MI</span>
+      <span class="neighborhood-tag">📍 + Thousands More Cities</span>
+    </div>
+  </div>
+</section>
+
+<!-- HOW IT WORKS -->
+<section class="sect bg-cream" id="how">
+  <div class="wrap">
+    <h2 class="sect-title">How to Find a Dentist Near You — 3 Easy Steps</h2>
+    <p class="sect-sub">Three simple steps — and you're connected to the best dental specialist near you</p>
+    <div class="steps">
+      <div class="step">
+        <div class="step-num">1</div>
+        <h3>Call Us Now</h3>
+        <p>Call us and speak instantly with a dental specialist — no waiting, no phone trees. We're here for patients nationwide every day</p>
+      </div>
+      <div class="step">
+        <div class="step-num">2</div>
+        <h3>We Find Your Dentist</h3>
+        <p>We instantly match you with the closest, highest-rated dental clinic in your area — filtered by service, insurance &amp; availability</p>
+      </div>
+      <div class="step">
+        <div class="step-num">3</div>
+        <h3>Book Your Appointment</h3>
+        <p>Get confirmed with a top-rated dental clinic near you — same-day or next-day appointments available nationwide</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- WHY US -->
+<section class="sect" id="why">
+  <div class="wrap">
+    <h2 class="sect-title">Why Patients Nationwide Choose Healusa</h2>
+    <p class="sect-sub">We make finding a trusted dentist simple, fast, and completely free — serving every zip code in the USA</p>
+    <div class="grid">
+      <div class="card">
+        <div class="card-icon">🛡️</div>
+        <h3>Verified Dental Clinics Nationwide</h3>
+        <p>Every dental clinic in our network is fully certified and verified. You're connected to real, trusted professionals in your area.</p>
+      </div>
+      <div class="card">
+        <div class="card-icon">💰</div>
+        <h3>100% Free to Use</h3>
+        <p>Our dental clinic finder is completely free. No hidden fees, no subscriptions — just fast access to the best dental clinics near you.</p>
+      </div>
+      <div class="card">
+        <div class="card-icon">⚡</div>
+        <h3>Same-Day Appointments</h3>
+        <p>Many clinics in our network offer same-day or next-day appointments. Get seen fast — no long waits, nationwide.</p>
+      </div>
+      <div class="card">
+        <div class="card-icon">🗺️</div>
+        <h3>All 50 States Covered</h3>
+        <p>From major cities to small towns, coast to coast — we have a dentist near you, wherever you are in the USA.</p>
+      </div>
+      <div class="card">
+        <div class="card-icon">📞</div>
+        <h3>Speak to a Real Person</h3>
+        <p>Call us and speak directly to a live dental specialist. No bots, no phone trees — just immediate help finding your nearest dental clinic.</p>
+      </div>
+      <div class="card">
+        <div class="card-icon">⭐</div>
+        <h3>4.9 Star Patient Rating</h3>
+        <p>Tens of thousands of patients trust Healusa to connect them with the best dental clinics near them — nationwide.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- SEO CONTENT SECTION -->
+<section class="seo-sect" id="about">
+  <div class="wrap">
+
+    <h2>Finding a Dentist Near You — Everything You Need to Know</h2>
+    <p>Every day, thousands of Americans search for a <strong>dentist near them</strong> — whether it's a sudden toothache at midnight, a cracked tooth before an important meeting, or simply finding a reliable family dentist close to home. The challenge is always the same: how do you quickly find a <strong>trustworthy, qualified dental clinic</strong> without spending hours searching online? At Healusa, we've solved that. One call connects you immediately with the top-rated dental clinic closest to you — matched to your specific needs, your insurance, and your schedule.</p>
+
+    <h3>We Serve All 50 States</h3>
+    <p>Healusa has built an extensive network of dental clinics across <strong>the entire United States</strong>. Whether you live in a major city or a small town, we have a dental clinic close to you.</p>
+    <p>From New York to California, Texas to Florida, and everywhere in between — no matter which state or city you're in, we find the dentist nearest to your exact location.</p>
+
+    <h3>Complete Dental Services Available Nationwide</h3>
+    <p>Our nationwide dental network covers every dental specialty and service you could need, including:</p>
+    <ul>
+      <li><strong>Emergency Dentistry:</strong> Same-day emergency dental care nationwide — for tooth pain, broken teeth, abscesses, and knocked-out teeth.</li>
+      <li><strong>General &amp; Preventive Dentistry:</strong> Routine cleanings, checkups, cavity fillings, digital X-rays, and fluoride treatments at convenient locations near you.</li>
+      <li><strong>Dental Implants:</strong> Permanent tooth replacement by certified implant specialists — single implants, full arch, and All-on-4 procedures.</li>
+      <li><strong>Orthodontics &amp; Invisalign:</strong> Traditional braces and clear aligners for kids, teens, and adults at top orthodontists nationwide.</li>
+      <li><strong>Cosmetic Dentistry:</strong> Professional teeth whitening, porcelain veneers, dental bonding, and complete smile makeovers by cosmetic dentists near you.</li>
+      <li><strong>Pediatric Dentistry:</strong> Child-friendly dental care for babies, toddlers, and teens — gentle, fun, and stress-free visits.</li>
+      <li><strong>Oral Surgery:</strong> Wisdom tooth extraction, surgical tooth removal, and bone grafting by board-certified oral surgeons near you.</li>
+      <li><strong>Periodontics:</strong> Gum disease diagnosis and treatment, deep cleaning (scaling &amp; root planing), and gum surgery by periodontists nationwide.</li>
+      <li><strong>Sedation Dentistry:</strong> Anxiety-free dental care with nitrous oxide, oral sedation, or IV sedation at select dental clinics near you.</li>
+      <li><strong>Senior Dental Care:</strong> Dentures, implant-supported dentures, and Medicare-compatible dental plans for older adults nationwide.</li>
+      <li><strong>TMJ Treatment &amp; Night Guards:</strong> Custom mouthguards and TMJ therapy for jaw pain and teeth grinding — available nationwide.</li>
+      <li><strong>Root Canal Therapy:</strong> Endodontic specialists near you who perform painless root canal procedures to save your natural teeth.</li>
+      <li><strong>Dental Crowns, Bridges &amp; Dentures:</strong> Full restorative dentistry to replace and restore damaged or missing teeth nationwide.</li>
+    </ul>
+
+    <h3>Emergency Dentist Near You — When You Can't Wait</h3>
+    <p>Dental emergencies don't respect business hours. If you're experiencing severe tooth pain, a dental abscess, a broken tooth, or any dental emergency — you need help right away. Healusa connects patients nationwide with emergency dental clinics that are available for same-day appointments.</p>
+    <p>Common dental emergencies that require immediate care include: severe toothache or throbbing pain, broken or chipped tooth, knocked-out tooth, lost crown or filling, swollen jaw or gum abscess, and uncontrolled bleeding after a procedure. One call to Healusa and we'll connect you with the nearest emergency dentist as fast as possible.</p>
+
+    <h3>Dental Clinics That Accept Insurance</h3>
+    <p>One of the most common questions from our patients is: "Does the dentist accept my insurance?" Our nationwide dental network works with all major insurance providers including Delta Dental, Cigna, Aetna, Humana, MetLife, United Healthcare, and more. Whether you have employer-sponsored dental insurance, a private plan, or are looking for affordable dental care without insurance — we can help match you with the right clinic.</p>
+
+    <h3>Find a Dentist Near You — The Healusa Advantage</h3>
+    <p>Healusa was built around one simple idea: finding a great <strong>dentist near you</strong> should be effortless. We've built a robust network of verified dental clinics across all 50 states so you never have to search alone. Whether you need a routine cleaning, an emergency extraction, or cosmetic veneers — Healusa connects you with the right dental clinic fast, free, and without any hassle.</p>
+    <p>Don't waste another hour searching for a <strong>dentist near you</strong>. Call us now and speak to a live specialist who will match you with the best dental clinic in your area — based on your specific needs, insurance, and schedule. Your healthier smile is just one call away.</p>
+
+  </div>
+</section>
+
+<!-- FAQ -->
+<section class="sect bg-cream" id="faq">
+  <div class="wrap">
+    <h2 class="sect-title">Frequently Asked Questions — Find a Dentist Near You</h2>
+    <p class="sect-sub">Everything you need to know about finding a dental clinic near you</p>
+    <div class="grid">
+      <div class="card">
+        <h3>How do I find a dentist near me fast?</h3>
+        <p>The fastest way is to call Healusa directly. A live specialist will connect you with a top-rated dental clinic in your area in minutes — no searching, no guessing.</p>
+      </div>
+      <div class="card">
+        <h3>Do you serve my state?</h3>
+        <p>Yes! We proudly serve all 50 states — from major cities to small towns, we have a dental clinic close to you, wherever you are in the USA.</p>
+      </div>
+      <div class="card">
+        <h3>Is there an emergency dentist near me open now?</h3>
+        <p>Yes! Many clinics in our nationwide network offer same-day emergency appointments. Call us now and we'll connect you with the nearest emergency dental clinic available today.</p>
+      </div>
+      <div class="card">
+        <h3>Do dentists in your network accept insurance?</h3>
+        <p>Absolutely. We work with patients across all major insurance plans nationwide — Delta Dental, Cigna, Aetna, Humana, MetLife and more. Call us and our specialists will match you with a clinic that accepts your coverage.</p>
+      </div>
+    </div>
+
+    <div class="disclaimer">
+      <strong>⚖️ Disclaimer:</strong> Healusa is a free service to assist individuals in connecting with dental clinics and dental specialists across the United States. All dental clinics and providers are independent, and Healusa does not warrant or guarantee any work performed. It is the responsibility of the individual to verify that the hired specialist furnishes the necessary license and certification required for their state. All persons depicted in a photo or video are actors or models and not specialists listed on this site.
+    </div>
+  </div>
+</section>
+
+<!-- CTA -->
+<section class="cta-sect" id="contact">
+  <div class="wrap">
+    <h2>Find the Best Dentist Near You — Right Now</h2>
+    <p>Our specialists are standing by — get connected with the <strong>closest dental clinic near you</strong> in under 2 minutes. We serve all 50 states.</p>
+    <a href="tel:+18448330097" class="cta-phone-box">📞 Call Now — Nationwide</a>
+    <div class="flex" style="justify-content:center">
+      <a href="tel:+18448330097" class="btn btn-gold" style="font-size:17px;padding:16px 36px">📞 Call Now — Find a Dentist Near You</a>
+    </div>
+    <p style="margin-top:20px;font-size:14px;opacity:.8">Available Mon–Fri 7am–7pm | Sat 10am–5pm EST | Serving All 50 States</p>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer class="footer">
+  <div class="wrap">
+    <div class="footer-grid">
+      <div>
+        <div class="logo" style="margin-bottom:14px">
+          <div class="logo-icon" style="background:var(--blue-light)">🦷</div>
+          <div class="logo-text" style="color:#e0e8f0">Heal<span style="color:var(--gold)">usa</span></div>
+          <span style="display:inline-flex;align-items:center;gap:2px;margin-left:8px">
+            <img src="https://flagcdn.com/w40/us.png" width="26" height="17" style="border-radius:2px;box-shadow:0 1px 3px rgba(0,0,0,0.3);display:block" alt="USA">
+          </span>
+        </div>
+        <p class="footer-desc">Free service connecting US residents nationwide with top-rated dentists in their area.</p>
+      </div>
+      <div>
+        <h4>Dental Services</h4>
+        <ul>
+          <li><a href="#services">Tooth Pain Relief</a></li>
+          <li><a href="#services">Dental Implants</a></li>
+          <li><a href="#services">Orthodontist &amp; Braces</a></li>
+          <li><a href="#services">Teeth Whitening</a></li>
+          <li><a href="#services">Emergency Dentist</a></li>
+          <li><a href="#services">Family Dentist</a></li>
+          <li><a href="#services">Pediatric Dentist</a></li>
+          <li><a href="#services">Oral Surgery</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Company</h4>
+        <ul>
+          <li><a href="#why">About Us</a></li>
+          <li><a href="#how">How It Works</a></li>
+          <li><a href="#faq">FAQ</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Contact</h4>
+        <p style="font-size:14px;margin-bottom:8px">📞 <a href="tel:+18448330097">Call Now — Nationwide</a></p>
+        <p style="font-size:14px;margin-bottom:16px">🌐 www.healusa.life</p>
+        <h4>Legal</h4>
+        <ul>
+          <li><a href="#faq">Privacy Policy</a></li>
+          <li><a href="#faq">Terms of Service</a></li>
+          <li><a href="#faq">Disclosure</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>&copy; 2025 Healusa. All rights reserved. | Find a Dentist Near You | Connecting Patients Nationwide with Certified Dental Professionals Across All 50 States</p>
+    </div>
+  </div>
+</footer>
+
+<a href="tel:+18448330097" class="fab" aria-label="Call us now — Find a dentist near you"><div class="fab-inner">📞</div></a>
+
+<!-- FAQ SCHEMA — Google Rich Results -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "How do I find a dentist near me fast?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Call Healusa at (844) 833-0097. A live specialist connects you with the nearest top-rated dental clinic in your area in minutes — no searching, no waiting."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Is there an emergency dentist near me open now?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes! Many clinics in our nationwide network offer same-day emergency dental appointments. Call us now and we'll connect you with the nearest emergency dentist available today."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Do you serve my state?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes. We proudly serve all 50 states — from major metro areas to small towns, and every neighborhood in between."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Do dentists in your network accept insurance?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes. Our nationwide dental network works with all major insurance plans including Delta Dental, Cigna, Aetna, Humana, MetLife, and United Healthcare. Call us and we'll match you with a clinic that accepts your specific coverage."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What dental services are available near me?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Our nationwide network covers all dental services: emergency dentistry, dental implants, braces and Invisalign, teeth whitening, crowns and veneers, family dentistry, pediatric dentistry, oral surgery, gum disease treatment, sedation dentistry, and senior dental care including dentures."
+      }
+    }
+  ]
+}
+</script>
+
+<script>
+function toggleMenu(){
+  document.getElementById('menu').classList.toggle('show');
+}
+document.addEventListener('click',e=>{
+  const m=document.getElementById('menu');
+  const h=document.getElementById('ham');
+  if(window.innerWidth<=768&&!m.contains(e.target)&&!h.contains(e.target)){
+    m.classList.remove('show');
+  }
+});
+</script>
+</body>
+</html>
