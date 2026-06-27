@@ -1,0 +1,93 @@
+name: HealUSA Dental SEO Agent
+
+on:
+  schedule:
+    # 7 runs/day × 10 pages = 70 pages/day
+    # Every ~3.5 hours starting 06:00 UTC
+    - cron: '0 6 * * *'
+    - cron: '30 9 * * *'
+    - cron: '0 13 * * *'
+    - cron: '30 16 * * *'
+    - cron: '0 20 * * *'
+    - cron: '30 23 * * *'
+    - cron: '0 3 * * *'
+  workflow_dispatch:
+    inputs:
+      force_run:
+        description: 'Force run (ignores daily quota check)'
+        required: false
+        default: 'false'
+
+jobs:
+  run-dental-agent:
+    runs-on: ubuntu-latest
+    timeout-minutes: 25
+
+    steps:
+      - name: Checkout repo
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 1
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+
+      - name: Cache pip
+        uses: actions/cache@v4
+        with:
+          path: ~/.cache/pip
+          key: ${{ runner.os }}-pip-dental-${{ hashFiles('**/requirements_dental.txt') }}
+          restore-keys: |
+            ${{ runner.os }}-pip-dental-
+
+      - name: Install dependencies
+        run: |
+          pip install --upgrade pip
+          pip install requests cryptography
+
+      - name: Restore published slugs
+        uses: actions/cache@v4
+        with:
+          path: |
+            published_slugs_dental.json
+            daily_queue_dental.json
+          key: dental-state-${{ github.run_id }}
+          restore-keys: |
+            dental-state-
+
+      - name: Run Dental SEO Agent
+        env:
+          GEMINI_API_KEY:              ${{ secrets.GEMINI_API_KEY }}
+          GEMINI_API_KEY_2:            ${{ secrets.GEMINI_API_KEY_2 }}
+          GEMINI_API_KEY_3:            ${{ secrets.GEMINI_API_KEY_3 }}
+          GROQ_API_KEY:                ${{ secrets.GROQ_API_KEY }}
+          GROQ_API_KEY_2:              ${{ secrets.GROQ_API_KEY_2 }}
+          GROQ_API_KEY_3:              ${{ secrets.GROQ_API_KEY_3 }}
+          GROQ_API_KEY_4:              ${{ secrets.GROQ_API_KEY_4 }}
+          GROQ_API_KEY_5:              ${{ secrets.GROQ_API_KEY_5 }}
+          GH_TOKEN:                    ${{ secrets.GH_TOKEN }}
+          HEALUSA_PAGES_REPO:          ${{ secrets.HEALUSA_PAGES_REPO }}
+          HEALUSA_SITE_URL:            ${{ secrets.HEALUSA_SITE_URL }}
+          BING_INDEXNOW_KEY_DENTAL:    ${{ secrets.BING_INDEXNOW_KEY_DENTAL }}
+          GOOGLE_SERVICE_ACCOUNT_KEY:  ${{ secrets.GOOGLE_SERVICE_ACCOUNT_KEY }}
+        run: python agent_dental.py
+
+      - name: Save state (slugs + queue)
+        uses: actions/cache@v4
+        with:
+          path: |
+            published_slugs_dental.json
+            daily_queue_dental.json
+          key: dental-state-${{ github.run_id }}
+
+      - name: Commit generated pages
+        env:
+          GH_TOKEN: ${{ secrets.GH_TOKEN }}
+        run: |
+          git config user.name  "Healusa Dental Bot"
+          git config user.email "bot@healusa.life"
+          git add pages/ sitemap.xml published_slugs_dental.json daily_queue_dental.json 2>/dev/null || true
+          git diff --staged --quiet || git commit -m "🦷 Dental pages — $(date +'%Y-%m-%d %H:%M')"
+          git push || echo "Nothing to push"
