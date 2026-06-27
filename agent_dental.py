@@ -1059,7 +1059,7 @@ CTA BUTTON (use exactly — place 3 times spaced through the article):
     related = get_related_pages(published, slug, tier, state)
     internal_links_html = build_internal_links_html(related, tier)
 
-    html = build_page(title, kw, body, loc, tier, city, state, service, internal_links_html, schema_area, breadcrumb, year)
+    html = build_page(title, kw, body, loc, tier, city, state, service, internal_links_html, schema_area, breadcrumb, year, loc_phrase, area_phrase)
     filename = slug + '.html'
     (OUTPUT_DIR / filename).write_text(html, encoding='utf-8')
 
@@ -1076,7 +1076,7 @@ CTA BUTTON (use exactly — place 3 times spaced through the article):
 # ══════════════════════════════════════════
 # BUILD PAGE — Full HTML matching healusa.life
 # ══════════════════════════════════════════
-def build_page(title, kw, body, loc, tier, city, state, service, internal_links_html, schema_area, breadcrumb, year):
+def build_page(title, kw, body, loc, tier, city, state, service, internal_links_html, schema_area, breadcrumb, year, loc_phrase='near you', area_phrase='your area'):
     slug_canonical = make_slug(kw)
     canonical = f'{SITE_URL}/pages/{slug_canonical}.html'
     og_desc = (
