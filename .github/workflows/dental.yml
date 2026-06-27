@@ -42,7 +42,7 @@ jobs:
           GEMINI_API_KEY_2:      ${{ secrets.GEMINI_API_KEY_2 }}
           GH_TOKEN:              ${{ secrets.GH_TOKEN }}
           HEALUSA_PAGES_REPO:    ${{ secrets.HEALUSA_PAGES_REPO }}
-          HEALUSA_SITE_URL:      ${{ secrets.HEALUSA_SITE_URL }}
+          HEALUSA_SITE_URL:      "https://www.healusa.life"
           BING_INDEXNOW_KEY:             ${{ secrets.BING_INDEXNOW_KEY }}
           GOOGLE_SERVICE_ACCOUNT_KEY:    ${{ secrets.GOOGLE_SERVICE_ACCOUNT_KEY }}
         run: |
