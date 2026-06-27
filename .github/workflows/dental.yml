@@ -47,4 +47,4 @@ jobs:
           GOOGLE_SERVICE_ACCOUNT_KEY:    ${{ secrets.GOOGLE_SERVICE_ACCOUNT_KEY }}
         run: |
           cd healusa-pages
-          python ../agent_dental.py
+          python -u ../agent_dental.py 2>&1
