@@ -19,6 +19,7 @@ Keywords:
 """
 
 import os
+import sys
 import json
 import time
 import random
@@ -27,6 +28,10 @@ import requests
 import re
 from datetime import datetime
 from pathlib import Path
+
+# Force unbuffered output for GitHub Actions logs
+sys.stdout.reconfigure(line_buffering=True)
+os.environ['PYTHONUNBUFFERED'] = '1'
 
 # ══════════════════════════════════════════
 # CONFIG
